@@ -117,12 +117,14 @@ a = 1.8
 b = 2.6
 x = [a + i * (b - a) / (nbpts - 1) for i in range(nbpts)]
 
-print(f'Fitted curve parameters are :\n A = {A}\n mu = {mu}\n sigma = {sigma}')
+formatted_string = f'Fitted curve parameters are :\n A = {A:.3f}\n mu = {mu:.3f}\n sigma = {sigma:.3f}'
+print(formatted_string)
 
 if True: # toggle
     plt.plot(T, N, label="given data", linestyle="", marker="x")
     plt.plot(x, [gaussian(i, initial_guess[0], initial_guess[1], initial_guess[2]) for i in x], label="initial gaussian")
-    plt.plot(x, [gaussian(i, A, mu, sigma) for i in x], label="theoretical")
+    plt.plot(x, [gaussian(i, A, mu, sigma) for i in x], label="fitted curve")
+    plt.text(1.8, 85, formatted_string, fontsize=9, color='black')
     plt.legend()
     plt.show()
 
