@@ -18,17 +18,9 @@ for i in range(len(N)):
     for j in range(N[i]):
         data.append(T[i])
 
-# meanT = sum(T)/len(T)
-# meanN = sum(N)/len(N)
 mean_data = sum(data)/len(data)
-# print(f'mean of T ={meanT}')
-# print(f'mean of T ={meanN}')
 print(f'mean of T ={mean_data}')
-# stdevT = statistics.stdev(T)
-# stdevN = statistics.stdev(N)
 stdev_data = statistics.stdev(data)
-# print(f'stdev of T ={stdevT}')
-# print(f'stdev of T ={stdevN}')
 print(f'stdev of T ={stdev_data}')
 
 
@@ -44,7 +36,7 @@ cdf = norm.cdf(T, loc=mean_data, scale=stdev_data)
 n_pdf = pdf/max(pdf)*max(N)
 
 # question 2
-if False: #toggle
+if True: #toggle
 
     # histogram
     fig, axes = plt.subplots(1,2)
@@ -61,7 +53,6 @@ if False: #toggle
     axes[1].set_xlabel("Flight time")
     axes[1].set_ylabel("Total number of flights")
 
-
     # comparison to normal law
     #plot that on the corresponding graphs
     axes[0].bar(T, n_pdf, width=0.05, align='center', label="normal law", alpha=0.6)
@@ -70,12 +61,10 @@ if False: #toggle
 
 
 
-
     plt.tight_layout()
     axes[1].legend()
 
     plt.show()
-
 
 
 # question 3
@@ -94,7 +83,6 @@ if p_value<0.05: # 0.05 is the condition for the 95% interval, if under that, we
     print("p value is under 0.05, we can reject the hypothesis that it is a gaussian.")
 else:
     print("p value is above 0.05, we can't reject the hypothesis that it is a gaussian.")
-
 
 
 
@@ -127,7 +115,6 @@ if True: # toggle
     plt.text(1.8, 85, formatted_string, fontsize=9, color='black')
     plt.legend()
     plt.show()
-
 
 
 # question 2

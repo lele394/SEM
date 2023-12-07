@@ -21,7 +21,6 @@ seq = random_sequence()
 print(f'len {len(seq)}; mean {sum(seq)/len(seq)}')
 print(f'number of YES : {sum(seq)}')
 
-# cont()#break
 
 number_of_seq = 500
 x = [i for i in range(0,1000)]
@@ -43,7 +42,6 @@ if True: #toggle
     plt.show()
 
 
-# cont()#break
 
 
 
@@ -110,13 +108,12 @@ for i in range(number_of_seq):
 if True: #toggle
     plt.bar(x,y,  width=1, align='center')
     plt.xlim(min, max)
-    plt.title("Distribution of YES for 500 sequenceS")
+    plt.title("Distribution of YES for 500 sequences")
     plt.xlabel("Number of YES for a sequence of 4000 pulls")
     plt.ylabel("Amount of time it happend for 500 sequences")
     plt.show()
 
 
-# cont()#break
 
 
 
