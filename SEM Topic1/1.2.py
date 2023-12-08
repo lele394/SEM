@@ -103,7 +103,8 @@ print(f'Std-dev of mean for 1000 sequence of 100 pull : {std_dev}')
 """
 
 check chapter 2 for estimator of mean
-use the sqrt formula, will find that the std-mean here is divided by around 10 compared to the previous one. because we do 1000 measures sqrt(1000/1) = 10
+use the sqrt formula, will find that the std-mean here is divided by around 10 compared to the previous one. 
+because we do 1000 measures sqrt(1000/1) = 10
 
 
 """

@@ -32,8 +32,8 @@ for N in Nall:
     Xall.append(X)
     pulls_master.append(pulls)
 
-#     plt.plot([k for k in range(N+2)], np.array(X+[0]) * 1/tries)
-# plt.show()
+    plt.plot([k for k in range(N+2)], np.array(X+[0]) * 1/tries)
+plt.show()
 
 def var(data):
     """var of a list"""
@@ -59,9 +59,10 @@ for data in pulls_master:
     c += 1
 
 #Nsigma²
-# plt.plot(  [0, 20], [0*0.25, 20*0.25 ]  )
+plt.plot(  [0, 20], [0*0.25, 20*0.25 ]  )
 # variance in dot
-# plt.plot(x_var, variance, marker="+", linestyle="")
+plt.plot(x_var, variance, marker="+", linestyle="")
+plt.show()
 
 
 
@@ -96,7 +97,7 @@ for pulls in pulls_master:
         y_to_plot.append(i)
 
     plt.plot(y_to_plot, x_to_plot)
-
+plt.show()
 
 
 
